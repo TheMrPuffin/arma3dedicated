@@ -3,8 +3,7 @@ FROM cm2network/steamcmd:root
 LABEL maintainer="TheMrPuffin"
 
 ENV STEAM_USER annoymous 
-ENV PASSWORD annoymous
-
+ENV STEAM_PASSWORD annoymous
 
 RUN set -x \ 
     && apt-get update \
@@ -14,11 +13,13 @@ RUN set -x \
     && apt-get clean autoclean \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
+
 USER ${USER}
 
 RUN mkdir -p /home/${USER}/arma3-dedicated/configs/profiles 
  
 COPY serverLaunch.py /home/${USER}/arma3-dedicated
+COPY server.cfg /home/${USER}/arma3-dedicated/configs
 
 WORKDIR  /home/${USER}/arma3-dedicated
 
