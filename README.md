@@ -23,6 +23,7 @@ You are required to change some lines in this to tailor for your needs. Please c
 
 # Required ports
 Incoming ports:
+
 | Port     | Description | 
 |----------|-------------|
 | UDP 2301 | Arma3 rcon port                   |   
@@ -57,5 +58,6 @@ You should navigate to the volume for the container to make changes to this befo
 As this image has just been developed, I have many thing I would like to add some of these feature are;
     - Automatic headless client startup
     - Automatic mod detection
+    - Creator DLC support
 
 This readme is maintained by TheMrPuffin; version 1.0
